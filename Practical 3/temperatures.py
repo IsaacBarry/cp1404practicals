@@ -14,12 +14,16 @@ def fahrenheit_to_celsius():
     return 5/9 * (fahrenheit - 32)
 
 
+def celsius_to_fahrenheit():
+    celsius = float(input("Celsius: "))
+    return celsius * 9.0/5 +32
+
+
 print(MENU)
 choice = input(">>> ").upper()
 while choice != "Q":
     if choice == "C":
-        celsius = float(input("Celsius: "))
-        fahrenheit = celsius * 9.0 / 5 + 32
+        fahrenheit = celsius_to_fahrenheit()
         print("Result: {:.2f} F".format(fahrenheit))
     elif choice == "F":
         celsius = fahrenheit_to_celsius()
